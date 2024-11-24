@@ -24,4 +24,17 @@ function upDate(previewPic){
         document.getElementById("image").style.backgroundImage = "url('')";
         document.getElementById("image").innerHTML = "Hover over an image below to display here.";
     }
+    // Function triggered on page load
+function initializeGallery() {
+    console.log("Gallery initialized.");
+    const images = document.querySelectorAll(".preview");
+    
+    // Loop to add tabindex attribute
+    for (let i = 0; i < images.length; i++) {
+        images[i].setAttribute("tabindex", "0");
+    }
+}
+
+// Add onload event listener to window
+window.onload = initializeGallery;
        
